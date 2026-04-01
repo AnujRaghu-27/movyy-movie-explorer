@@ -1,0 +1,156 @@
+:root {
+    --bg: #f2efe8;
+    --text: #111010;
+    --text-dim: #555550;
+    --accent: #1a3cff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'IBM Plex Sans', sans-serif;
+    line-height: 1.4;
+}
+
+
+body::before {
+    content: 'movyy';
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-weight: 400;
+    color: var(--text);
+    text-align: left;
+    padding: 48px 40px 16px;
+    letter-spacing: -1px;
+    text-transform: none; 
+}
+
+
+body::after {
+    content: '';
+    display: block;
+    height: 1px;
+    background: var(--text);
+    margin: 0 40px;
+    opacity: 0.1;
+}
+
+.movies-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 2px;
+    padding: 40px;
+    width: 100%;
+}
+
+
+.movies-container > div {
+    background: transparent;
+    border-radius: 0; 
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.movies-container img {
+    width: 100%;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(15%);
+    transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+.movies-container > div:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.03);
+}
+
+
+.movies-container h2 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--text);
+    padding: 8px 4px 2px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.movies-container p {
+    font-size: 0.72rem;
+    color: var(--text-dim);
+    padding: 0 4px 12px;
+    line-height: 1.4;
+    display: flexbox;
+    overflow: hidden;
+}
+
+
+.show-more {
+    display: block;
+    margin: 60px 40px;
+    padding: 0;
+    background: none;
+    border: none;
+    border-bottom: 2px solid var(--accent);
+    color: var(--accent);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    border-radius: 0;
+}
+
+.show-more:hover {
+    opacity: 0.6;
+}
+
+
+@media (max-width: 600px) {
+    body::before {
+        padding: 32px 20px 8px;
+    }
+    
+    body::after {
+        margin: 0 20px;
+    }
+    
+    .movies-container {
+        padding: 20px;
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    }
+    
+    .show-more {
+        margin: 40px 20px;
+    }
+}
+
+
+.movies-container:empty::after {
+    content: "Curating selection...";
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 80px 0;
+    font-style: italic;
+    color: var(--text-dim);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+}
