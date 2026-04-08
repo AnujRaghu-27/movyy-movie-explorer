@@ -1,14 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Movyy Explorer</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class = "movies-container"></div>
-    <button id = "show-more" class = "show-more">Show More</button>
+    <div class="header-controls">
+        <span id="fav-count">Favourites: 0</span>
+        <button id="dark-mode-toggle">Toggle Mode</button>
+    </div>
+
+    <div class="genres">
+        <button class="active">All</button>
+        <button>Action</button>
+        <button>Comedy</button>
+        <button>Horror</button>
+        <button>Drama</button>
+        <button>Sci-Fi</button>
+        <button>Romance</button>
+        <button>Animation</button>
+    </div>
+
+    <div class="search-sort-container">
+        <input type="text" id="search" placeholder="Search movies...">
+        <select id="sort">
+            <option value="default">Default</option>
+            <option value="rating">Rating (High to Low)</option>
+            <option value="date">Release Date (Newest First)</option>
+            <option value="popularity">Popularity (High to Low)</option>
+        </select>
+    </div>
+
+    <div class="movies-container"></div>
+
     <script src="app.js"></script>
 </body>
+
 </html>
