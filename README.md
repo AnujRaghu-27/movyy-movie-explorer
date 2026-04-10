@@ -47,3 +47,8 @@ Movyy is designed to help users discover movies effortlessly. Instead of scrolli
 2. Get a free API key from [TMDB](https://www.themoviedb.org)
 3. Add your API key in the project where it says `YOUR_API_KEY`
 4. Open `index.html` in your browser and you're good to go!
+
+---
+
+## Demo Link
+https://movyy-movie-explorer.vercel.app/
