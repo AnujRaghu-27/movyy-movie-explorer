@@ -20,24 +20,17 @@ Movyy is designed to help users discover movies effortlessly. Instead of scrolli
 
 ---
 
-## ✨ Planned Features
+## Features
 
 ### Core Features
 -  **API Integration** — Fetch real-time movie data using TMDB API
--  **Movie Cards** — Display movie poster, title, rating, release year, and genre
--  **Loading States** — Spinner shown while data is being fetched
+-  **Movie Cards** — Display movie poster, title
 -  **Fully Responsive** — Works on mobile, tablet, and desktop
 -  **Search** — Search movies by title in real time
--  **Filter** — Filter movies by genre (Action, Comedy, Horror, Drama, etc.)
--  **Sort** — Sort movies by rating, popularity, or release date (ascending/descending)
+-  **Filter** — Filter movies by genre
+-  **Sort** — Sort movies by rating, popularity, or release date
 -  **Dark / Light Mode** — Toggle between dark and light themes
 -  **Watchlist / Favourites** — Save and remove favourite movies
-
-### Bonus Features (Optional)
-- 🔎 **Debounced Search** — Optimized search to avoid excessive API calls
-- 📄 **Pagination** — Browse movies across multiple pages
-- 💾 **Local Storage** — Persist watchlist and theme preference across sessions
-- 🔁 **Throttling** — Controlled rate for scroll and button events
 
 ---
 
@@ -45,7 +38,6 @@ Movyy is designed to help users discover movies effortlessly. Instead of scrolli
 
 - HTML, CSS, JavaScript
 - TMDB API + Fetch API
-- localStorage (for watchlist and theme preference)
 
 ---
 
